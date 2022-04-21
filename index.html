@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS</title>
+</head>
+
+<body>
+    <h2>HOLA MUNDO!</h2>
+    <p>Mi primer parrafo</p>
+    <canvas id="graficoFumadores"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+        const json = {
+            data: [3, 5, 1, 8, 4, 15, 1],
+            labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+        };
+
+        const divGraficoFumadores = document.getElementById("graficoFumadores");
+        new Chart(divGraficoFumadores, {
+            type: 'bar',
+            data: {
+                labels: json.labels,
+                datasets: [{
+                    data: json.data,
+                    label: 'Puchos por dia',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>

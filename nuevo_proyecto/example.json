@@ -1,0 +1,9 @@
+{
+    "llave": "valor",
+    "numero": 2,
+    "array": [0, 1, 2, 3],
+    "objeto": { "llave": "valor" },
+    "persona": { "nombre": "Marian", "edad": 25 },
+    "esPersona": true,
+    "esUnPerro": false
+}
